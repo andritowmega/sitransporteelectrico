@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pe.gob.sitransporte.sitransporteconductor">
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icono"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icono"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <meta-data
+            android:name="com.here.android.maps.appid"
+            android:value="RlZAAjTC4KMazftcHWuL" />
+        <meta-data
+            android:name="com.here.android.maps.apptoken"
+            android:value="St1rEB7xIo-vdy4TFCZqQg" />
+        <meta-data
+            android:name="com.here.android.maps.license.key"
+            android:value="TILC00Y9iJ6AWWCd4+DBQxvffrYXeazx+56pBCr2863ScXm+R5Rxjiu1pzEiuww81UB5GzgvVKgib3H3MTK6HmsgmjVVm86eNg2bZPQSmJ/79PtnlRpVuMvw2+28JPTjdRvygUvsHkEoSh/YjctFaletYOMoeRUYng2zMb+U94qV2E0oyKl+L68qbys9lRSYRNKKd5ElGr0Pv/CmUPEkVB30t9rWa3Z64vhyRdXsdyUclIWCNMLEThKtjXtXIWWjyOJPffhseupyypEmXi45pgHnjc+DCTP5rqkvoDwCPuoNOA7hbjBCMdQ4srBhwx0x8pE6/ZPkSn0/Jy+dZWK8xuFuZRGlU4fWqL5VTEJsb907rA/jYVmKW90mVJjxfxNFRyNSkAFOEEVsXe1+xHtMSfX5eCcDxQUeMA9413N5AaAZDM8sHz+YIYPk/9qsAJPrUwC3fGa/B2i6aHQeXj9fBAA9i0/NyFI7XLw1KFCa/dPpAR3YcFWxF7lbtrryULg6SxICcytbk8iJiYj07dk0vi04kQA+zhBVJh7oAaa3trCWiNuDF/OZETMXfVU5gEhVyW+uJElmnGcn5WvLOX6QeY0tzVSJZSUTLX1RAwEWtICP4iQIE1VEaj5AYNymSQluybp2Jpoz91PJsafJG4cyNEYunKIJPy7s+yr3Zfc7hcY=" />
+
+        <activity android:name=".HereActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".MainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name="com.here.android.mpa.service.MapService"
+            android:exported="false"
+            android:label="BasicMapSolutionMapService">
+            <intent-filter>
+                <action android:name="com.here.android.tutorial.MapService" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
